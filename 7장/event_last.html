@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script>
+        $(function() {
+            var fontSize = 14;
+
+            $(".zoomOutBtn").on("click", downSizingFont);
+            $(".zoomInBtn").on("click", upSizingFont);
+            $(".originBtn").on("click", resetFontSize);
+
+            function resetFontSize() {
+                fontSize = 14;
+                $("#wrap").css({"font-size":fontSize + "px"});
+            }
+            function upSizingFont() {
+                fontSize = (fontSize + 1 >= 20) ? 20 : fontSize + 1;
+                $("#wrap").css({"font-size":fontSize + "px"});
+            }
+            function downSizingFont() {
+                fontSize = (fontSize - 1 <= 8) ? 8 : fontSize - 1;
+                $("#wrap").css({"font-size":fontSize + "px"});
+            }
+        });
+    </script>
+</head>
+<body>
+    <p class="zoomBtnZone">
+        <button class="zoomOutBtn">-</button>
+        <button class="originBtn">100%</button>
+        <button class="zoomInBtn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="wrap">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised 
+            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including 
+            versions of Lorem Ipsum.
+    </div>
+</body>
+</html>
