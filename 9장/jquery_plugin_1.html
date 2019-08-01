@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <style>
+        .layer_popup {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            cursor: move;
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".layer_popup").draggable();
+        }); 
+    </script>
+</head>
+<body>
+    <div class="layer_popup">
+        <img src="../images/pic_1.jpg" alt="">
+    </div>
+</body>
+</html>
